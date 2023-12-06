@@ -1,10 +1,9 @@
 const companyElements = document.querySelectorAll('.text-blue-medium.css-1jw2l11.eou9tt70');
-const bbbRatingsElements = document.querySelectorAll('.bds-body.font-bold.text-blue-brand.text-size-7');
+const bbbRatingsElements = document.querySelectorAll('.css-1k0ktya.e1akw1fw0');
 const contactNoElements = document.querySelectorAll('.bds-body.css-1u1ibea.e230xlr0');
 const addressElements = document.querySelectorAll('.bds-body.text-size-5.text-gray-70');
 
 document.write('<table>');
-
 document.write('<tr>');
 document.write('<th>Rank</th>');
 document.write('<th>Company Name</th>');
@@ -30,7 +29,7 @@ for (let i = 0; i < companyElements.length; i++) {
 
 document.write('</table>');
 
-
+// https://www.bbb.org/us/ks/cheney/category/plumber
 // ------------------------------------------
 // inside the bbb
 const companyNameElement = document.querySelector('.bds-h2.font-normal.text-black');

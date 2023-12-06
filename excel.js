@@ -1081,6 +1081,8 @@ function copyDataToSheet2() {
   var sheet2RowK = findFirstEmptyRow(sheet2, "K");
   var sheet2RowQ = findFirstEmptyRow(sheet2, "Q");
   var sheet2RowV = findFirstEmptyRow(sheet2, "V");
+  var sheet2RowAG = findFirstEmptyRow(sheet2, "AG");
+  var sheet2RowAH = findFirstEmptyRow(sheet2, "AH");
 
   // Loop through each row in the source sheet
   for (var i = 0; i < data.length; i++) {
@@ -1122,6 +1124,18 @@ function copyDataToSheet2() {
       // Transfer the data from column B to Sheet2 column Q at the first empty row
       sheet2.getRange(sheet2RowQ, 17).setValue(dataToCopy); // 17 corresponds to column Q
       sheet2RowQ = findFirstEmptyRow(sheet2, "Q"); // Update the row for column Q
+    }
+
+    if (companyName && companyName.toLowerCase().includes("count")) {
+      // Transfer the data from column B to Sheet2 column G at the first empty row
+      sheet2.getRange(sheet2RowAG, 33).setValue(dataToCopy); // 7 corresponds to column G
+      sheet2RowAG = findFirstEmptyRow(sheet2, "AG");
+    }
+
+    if (companyName && companyName.toLowerCase().includes("hotel star")) {
+      // Transfer the data from column B to Sheet2 column G at the first empty row
+      sheet2.getRange(sheet2RowAH, 34).setValue(dataToCopy); // 7 corresponds to column G
+      sheet2RowAH = findFirstEmptyRow(sheet2, "AH");
     }
   }
  // Clear all data in Sheet1
